@@ -165,7 +165,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
 <p>（1）逻辑结构：数据元素之间的逻辑关系，算法的设计取决于所选定的逻辑结构。</p>
 <p>（2）存储结构：数据及数据之间的关系在计算机内的表示（也称映像，或物理结构），算法的实现依赖于所选用的物存储结构。</p>
 <p>（3）运算：在数据结构上执行的运算，数据被使用的方式。</p>
-<h1 id="数据结构三要素"><a class="anchor" href="#数据结构三要素">#</a> 数据结构三要素</h1>
+<h1 id="12数据结构三要素"><a class="anchor" href="#12数据结构三要素">#</a> 1.2 数据结构三要素</h1>
 <h2 id="一-数据的四种逻辑结构"><a class="anchor" href="#一-数据的四种逻辑结构">#</a> 一、数据的四种逻辑结构</h2>
 <p><span class="red">线性结构</span>：数据元素之间存在一对一关系，一个前驱一个后继。</p>
 <p><span class="red">树形结构</span>：数据元素之间存在一对多的关系。</p>
@@ -174,7 +174,136 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
 <div class="note info">
 <p>四种逻辑结构也可以分为两类：线性结构和非线性结构。其中虽然树形结构有连线关系，但他并不是一对一关系，所以不属于线性结构，这点需要注意。</p>
 </div>
-<p>2023.2.16 ：明天继续！</p>
+<h2 id="二-数据的四种存储结构"><a class="anchor" href="#二-数据的四种存储结构">#</a> 二、数据的四种存储结构</h2>
+<p><span class="red">顺序结构</span></p>
+<p><span class="red">链接结构</span></p>
+<div class="note info">
+<p>以上两者是最基本的存储表示方式</p>
+</div>
+<p><span class="red">索引结构</span></p>
+<p><span class="red">散列结构</span></p>
+<p>下面我们来分别了解一下这四种存储结构</p>
+<h3 id="顺序存储结构"><a class="anchor" href="#顺序存储结构">#</a> 顺序存储结构</h3>
+<p>是将逻辑上相邻的数据元素存储在物理地址也相邻的存储单元中；元素之间的关系由存储单元的邻接关系来体现。</p>
+<ul>
+<li>优点：可实现随机存取，每个元素占用最少的存储空间；</li>
+<li>缺点：只能使用相邻的一整块存储单元，可能产生较多的外部碎片。</li>
+</ul>
+<p>举个栗子：</p>
+<p>例如， 由 4 个元素组成的线性数据结构（a0, a1, a2, a3），存储在某个连续的存储区内，设存储区的起始地址是 102，假定每个元素占 2 个存储单元。</p>
+<p>那么就存在 Loc (a<sub>k</sub>) = 102 + 2 ×k</p>
+<h3 id="链接存储结构"><a class="anchor" href="#链接存储结构">#</a> 链接存储结构</h3>
+<p>不要求逻辑上相邻的数据元素在物理地址上也相邻；借助于指示元素存储地址的指针来表示元素之间的逻辑关系。</p>
+<ul>
+<li>
+<p>优点：不会出现碎片现象，能充分利用所有存储单元</p>
+</li>
+<li>
+<p>缺点：每个元素因存储指针而占用额外的存储空间，且只能顺序存取。</p>
+</li>
+</ul>
+<h3 id="索引存储结构"><a class="anchor" href="#索引存储结构">#</a> 索引存储结构</h3>
+<p>除数据元素存储在一组地址连续的内存空间外，还需建立一个索引表，索引表中的每一项称为索引项，索引项的一般形式是（关键字，下标）。</p>
+<ul>
+<li>
+<p>优点：检索速度快</p>
+</li>
+<li>
+<p>缺点：增加附加的索引表后会占用较多的存储空间，另外，在<span class="red">增加和删除</span>数据时要同步修改索引表，因而会花费较多的时间</p>
+</li>
+</ul>
+<h3 id="散列存储结构"><a class="anchor" href="#散列存储结构">#</a> 散列存储结构</h3>
+<p>通过散列（哈希）函数和解决冲突的方法，将关键字散列在连续的有限的地址空间内，并将散列函数的值解释成关键字所在元素的存储地址。其特点是存取速度快，只能按关键字随机存取，不能顺序存取，也不能折半存取。</p>
+<ul>
+<li>
+<p>优点：检索、增加和删除结点的速度都很快</p>
+</li>
+<li>
+<p>缺点：若散列函数不好，则可能出现元素存储单元的冲突，而解决冲突会增加时间和空间开销。</p>
+</li>
+</ul>
+<h1 id="13数据抽象和抽象数据类型"><a class="anchor" href="#13数据抽象和抽象数据类型">#</a> 1.3 数据抽象和抽象数据类型</h1>
+<p>[抽象].{red}：抽取事物的共同的和实质的东西，忽略其不是本质的细枝末节。抽象包括数据抽象和过程抽象。</p>
+<p>还是举个栗子：</p>
+<p>“学生”，这一概念是对学生群体的抽象，抽取了学生群体的共性，忽略了每个学生的特殊性。</p>
+<p>在这里我们要学习一个新的概念，抽象数据类型：</p>
+<p>[抽象数据类型 (Abstract Data Type, ADT)].{red} 是一个数学模型以及在其上定义的运算集合。其最主要的两个特征是数据封装和信息隐蔽。</p>
+<p>那什么又是数据封装和信息隐蔽呢？</p>
+<p>定义：数据封装是指把数据和操纵数据的运算组合在一起的机制。信息隐蔽是指数据的使用者只需知道这些运算的定义（也称规范）便可访问数据，而无须了解数据的存储以及算法实现细节。</p>
+<div class="note info">
+<p>通过数据封装和信息隐蔽，可使数据的使用和实现相分离。</p>
+</div>
+<p>再举个栗子：C 语言中的整型 int 就是抽象数据类型。它的实现是隐蔽的，使用者只能通过整型上定义的一组运算对整型变量执行操作。</p>
+<p>我们将抽象数据类型的定义格式如下：</p>
+<div class="note info">
+<p>ADT 抽象数据类型名</p>
+<p>{</p>
+<p>数据：</p>
+<p>数据元素及其之间关系的定义</p>
+<p>运算：</p>
+<p>运算 1 (参数表)：运算功能描述</p>
+<p><strong>......</strong></p>
+<p>运算 n (参数表)：运算功能描述</p>
+<p>}</p>
+</div>
+<p>在数据结构中，最常见的运算有以下几种</p>
+<p>ℹ️创建运算：创建一个数据结构</p>
+<p>ℹ️清除运算：删除数据结构中的全部元素</p>
+<p>ℹ️插入运算（增）：在数据结构的指定位置插入一个新元素</p>
+<p>ℹ️删除运算（删）：将数据结构中的某个元素删除</p>
+<p>ℹ️搜索运算（查）：在数据结构中搜索满足一定条件的元素</p>
+<p>ℹ️更新运算（改）：修改数据结构中的某个指定元素的值</p>
+<p>ℹ️访问运算：访问数据结构中的某个元素</p>
+<p>[注意].{red}：我们将一种数据结构视为一个抽象数据类型，从规范和实现两方面来讨论数据结构。</p>
+<ul>
+<li>C 语言的函数首部（声明）规范了 “做什么”</li>
+<li>C 语言的函数体实现了 “怎么做”</li>
+</ul>
+<p rainbow="">[规范依赖于逻辑结构，实现依赖于存储结构].</p>
+<p>因此，一个规范基于不同的存储结构会有不同的具体实现！</p>
+<h1 id="14算法和算法分析"><a class="anchor" href="#14算法和算法分析">#</a> 1.4 算法和算法分析</h1>
+<p>[算法].{red} 是对特定问题的求解步骤，它是指令的有限序列</p>
+<ul>
+<li>算法的五个特征：</li>
+</ul>
+<p>（1）输入：有零个或者多个输入</p>
+<p>（2）输出：至少产生一个输出（运算结果或提示信息）</p>
+<p>（3）确定性：每一条指令都有确切的定义，没有二义性</p>
+<p>（4）可行性：可以通过已经实现的基本运算执行有限次来实现</p>
+<p>（5）有穷性：算法必须总能在执行有限步之后终止</p>
+<ul>
+<li>算法的性能标准</li>
+</ul>
+<p>（1）正确性：在合理的数据输入下，算法可以在有限的时间内产生满足预先规定的功能和性能要求。</p>
+<p>（2）可读性：一个好的算法应当思路清晰、简单明了。</p>
+<p>（3）健壮性：一个好的算法应该在输入不合法的数据时，能做出适当处理，而不至于产生异常或者出现崩溃等严重后果。</p>
+<p>（4）高效性：评价一个算法的效率主要包括时间和空间两个方面。</p>
+<div class="note success">
+<p>知道了算法的基本概念，接下来我们要学习算法的一个重要知识：时间复杂度</p>
+</div>
+<p>程序步：定义是在语法上或者语义上有意义的程序段，该程序段的执行时间 [与具体执行环境无关].{red}。</p>
+<p>💁注意：一个算法时间花销与算法中语句的执行次数成正比例：算法中语句执行次数多，他的时间花销就多。一个算法中的语句在执行次数称为 [语句频度].{red}。</p>
+<h2 id="渐进时间复杂度"><a class="anchor" href="#渐进时间复杂度">#</a> 渐进时间复杂度</h2>
+<p>使用大 [O].{red} 记号表示的算法的时间复杂度，称为算法的渐近时间复杂度。渐近时间复杂度也常简称为时间复杂度。</p>
+<p>例如：O（1）表示常数时间，即算法只需要进行有限个程序步。</p>
+<div class="note info">
+<p>在大 O 记号下，可用程序步来估计算法的执行时间。同时在很多情况下，可以通过考察一个算法中的关键操作的执行次数来计算算法的渐近时间复杂度。</p>
+<p>求解方法：</p>
+<p>（1）如果没有循环语句，则为 O (1)</p>
+<p>（2）有循环语句，则选择最深层的循环体，直接累计次数，得出与 n 之间的函数关系</p>
+<p>这里又分为：循环主体中的变量与循环条件有关、无关这两种情况</p>
+<p>（3）递归问题，使用公式进行递推，令 k 次后问题规模为 1，得出 k 与 n 的关系，代入公式计算</p>
+<p>💁当然，具体还是得看习题。</p>
+<h2 id="空间复杂度"><a class="anchor" href="#空间复杂度">#</a> 空间复杂度</h2>
+<p>算法的空间复杂度是程序运行从开始到结束的存储量。一般按照最坏情况来分析。</p>
+<p>程序运行所需的存储空间包括两部分：</p>
+<p>（1）[固定部分].{red}: 主要包括程序代码、常量、简单变量、定长成分的结构变量所占的空间。</p>
+<p>（2）[可变部分].{red}: 与算法在某次执行中处理的特定数据的大小和规模有关，如某调用函数中动态申请的数组空间。</p>
+<div class="note warning">
+<p>算法原地工作是指算法所需的辅助空间为常量，即 O (1)</p>
+</div>
+</div>
+<p>2023.2.17 更新，本文只做个人笔记使用。</p>
 
       <div class="tags">
           <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"><i class="ic i-tag"></i> 数据结构</a>
@@ -189,7 +318,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-02-16 23:25:32" itemprop="dateModified" datetime="2023-02-16T23:25:32+08:00">2023-02-16</time>
+    <time title="Modified: 2023-02-17 16:22:45" itemprop="dateModified" datetime="2023-02-17T16:22:45+08:00">2023-02-17</time>
   </span>
 </div>
 
@@ -258,7 +387,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#11%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text"> 1.1 基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-number">2.</span> <span class="toc-text"> 数据结构三要素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9B%9B%E7%A7%8D%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text"> 一、数据的四种逻辑结构</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#11%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text"> 1.1 基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-number">2.</span> <span class="toc-text"> 1.2 数据结构三要素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9B%9B%E7%A7%8D%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text"> 一、数据的四种逻辑结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text"> 二、数据的四种存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 顺序存储结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 链接存储结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 索引存储结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E5%88%97%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 散列存储结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13%E6%95%B0%E6%8D%AE%E6%8A%BD%E8%B1%A1%E5%92%8C%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text"> 1.3 数据抽象和抽象数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#14%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-number">4.</span> <span class="toc-text"> 1.4 算法和算法分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%90%E8%BF%9B%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">4.1.</span> <span class="toc-text"> 渐进时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">4.2.</span> <span class="toc-text"> 空间复杂度</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -371,20 +500,20 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
+<a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
 </div>
 
-    <span><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" title="数据结构第一章：绪论">数据结构第一章：绪论</a></span>
+    <span><a href="/2023/02/15/%E8%AE%B0%E5%BD%95%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="记录：第一篇博客">记录：第一篇博客</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
 </div>
 
-    <span><a href="/2023/02/15/%E8%AE%B0%E5%BD%95%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="记录：第一篇博客">记录：第一篇博客</a></span>
+    <span><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" title="数据结构第一章：绪论">数据结构第一章：绪论</a></span>
   </li>
 
   </ul>
