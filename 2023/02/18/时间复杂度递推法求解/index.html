@@ -24,12 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-
-<link rel="canonical" href="http://example.com/404">
-
+  <meta name="keywords" content="数据结构" />
 
 
-  <title>Σ( ° △ °|||)︴404! |
+<link rel="canonical" href="http://example.com/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/">
+
+
+
+  <title>
+时间复杂度递推法例题及求解 - 数据结构 |
 Yume Shoka = 千秋几世 = 浮生百日紀</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -57,8 +60,19 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Σ( ° △ °|||)︴404!
+  <h1 itemprop="name headline">时间复杂度递推法例题及求解
   </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-02-18 15:37:07">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-18T15:37:07+08:00">2023-02-18</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -87,14 +101,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
 
       </div>
       <div id="imgs" class="pjax">
-        <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
-        </ul>
+          <img src="/assets/third.jpg">
       </div>
     </header>
     <div id="waves">
@@ -114,9 +121,121 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="page wrap">
-    <div class="notfound">Σ( ° △ °|||)︴404!</div>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="item" rel="index" title="In 数据结构"><span itemprop="name">数据结构</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="易山">
+    <meta itemprop="description" content="浮生百日紀, TyBlog ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="千秋几世">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="tn2tn2n的解为tnonlogn的求解"><a class="anchor" href="#tn2tn2n的解为tnonlogn的求解">#</a> T (n)=2T (n/2)+n 的解为 T (n)=O (nlogn) 的求解</h1>
+<p class="quiz">1. 假设某算法的计算时间可以用递推关系式 T (n)=2T (n/2)+n 表示，则该算法的时间复杂度为<span class="gap"></span>。</p>
+<ul class="options">
+<li>
+<p>O(logn)</p>
+</li>
+<li class="correct">
+<p>O(n*logn)</p>
+</li>
+<li>
+<p>O(n)</p>
+</li>
+<li>
+<p>O(n<sup>2</sup>)</p>
+</li>
+</ul>
+<p><img data-src="https://i.328888.xyz/2023/02/18/BPQCL.jpeg" alt="题解" title="题解" /></p>
+
+      <div class="tags">
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"><i class="ic i-tag"></i> 数据结构</a>
+      </div>
   </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-02-18 16:10:04" itemprop="dateModified" datetime="2023-02-18T16:10:04+08:00">2023-02-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="易山 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>易山 <i class="ic i-at"><em>@</em></i>千秋几世
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/" title="时间复杂度递推法例题及求解">http://example.com/2023/02/18/时间复杂度递推法求解/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" itemprop="url" rel="prev" data-background-image="&#x2F;assets&#x2F;second.jpg" title="数据结构第一章：绪论">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> 数据结构</span>
+  <h3>数据结构第一章：绪论</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
 
         </div>
         <div id="sidebar">
@@ -127,8 +246,12 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tn2tn2n%E7%9A%84%E8%A7%A3%E4%B8%BAtnonlogn%E7%9A%84%E6%B1%82%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text"> T (n)&#x3D;2T (n&#x2F;2)+n 的解为 T (n)&#x3D;O (nlogn) 的求解</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" rel="bookmark" title="数据结构第一章：绪论">数据结构第一章：绪论</a></li><li class="active"><a href="/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/" rel="bookmark" title="时间复杂度递推法例题及求解">时间复杂度递推法例题及求解</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -236,6 +359,16 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
+</div>
+
+    <span><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" title="数据结构第一章：绪论">数据结构第一章：绪论</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
 </div>
 
@@ -250,16 +383,6 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
 </div>
 
     <span><a href="/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/" title="时间复杂度递推法例题及求解">时间复杂度递推法例题及求解</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
-</div>
-
-    <span><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" title="数据结构第一章：绪论">数据结构第一章：绪论</a></span>
   </li>
 
   </ul>
@@ -290,7 +413,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '404',
+    path: '2023/02/18/时间复杂度递推法求解/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
@@ -301,7 +424,14 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
       stats: "${hits} results found in ${time} ms"
     },
     valine: true,fancybox: true,
-    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',quiz: {
+      choice: "Multiple Choice",
+      multiple: "Multiple Answer",
+      true_false: "True/False",
+      essay: "Questions",
+      gap_fill: "Gap Filling",
+      mistake: "Wrong Answer"
+    },
     ignores : [
       function(uri) {
         return uri.includes('#');
