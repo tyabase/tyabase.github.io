@@ -269,11 +269,8 @@
   margin-right: 0.5rem;
   background-color: var(--color-grey);
 }
-.v .item .tag.visitor {
-  background-color: #855194;
-}
-.v .item .tag.friend {
-  background-color: #ed6ea0;
+.v .item .tag. {
+  background-color: ;
 }
 .v .item .at {
   color: var(--primary-color);
