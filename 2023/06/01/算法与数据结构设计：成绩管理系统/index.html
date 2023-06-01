@@ -1,0 +1,765 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="千秋几世" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="千秋几世" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="千秋几世" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="c++" />
+
+
+<link rel="canonical" href="http://example.com/2023/06/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+
+
+
+  <title>
+实验周习题记录：成绩管理系统 - c++ |
+Yume Shoka = 千秋几世 = 浮生百日紀</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">实验周习题记录：成绩管理系统
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-06-01 21:30:41">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-06-01T21:30:41+08:00">2023-06-01</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="/assets/s6.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/c/" itemprop="item" rel="index" title="In c++"><span itemprop="name">c++</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="易山">
+    <meta itemprop="description" content="浮生百日紀, TyBlog ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="千秋几世">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="实验周习题记录成绩管理系统"><a class="anchor" href="#实验周习题记录成绩管理系统">#</a> 实验周习题记录：成绩管理系统</h1>
+<p>💁问题描述：给出 n 个学生的考试成绩表，成绩表包括学生的学号、姓名、考试成绩（高等数学、英语、物理），设计一个简单的成绩管理程序。</p>
+<p>基本要求：</p>
+<p>建立成绩表，能够插入、删除、修改学生的成绩记录；</p>
+<p>🌟按任一单科成绩排序；</p>
+<p>🌟计算每名学生的平均成绩；</p>
+<p>🌟统计任一单科成绩不及格的学生人数，输出不及格人数及不及格的学生名单</p>
+<p>🌟根据平均成绩将成绩表按由高到低的次序排列，统计每名学生在考试中获得的名次，分数相同的为同一名次，按名次输出成绩表。</p>
+<p>🌟成绩表保存在文件中，可以从文件读取数据。</p>
+<p>测试数据：学生可以根据自己班级的考试成绩单，任意截取一部分做为测试数据。</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+// 学生结构体
+struct student &#123;
+    string id; // 学号
+    string name; // 姓名
+    double math; // 高等数学成绩
+    double eng; // 英语成绩
+    double phy; // 物理成绩
+    double avg; // 平均成绩
+    int rank; // 排名
+&#125;;
+
+vector&lt;student&gt; students; // 存储学生信息的vector
+
+// 按学号查找学生在vector中的索引
+int find_idx(string id) &#123;
+    for (int i = 0; i &lt; students.size(); i++) &#123;
+        if (students[i].id == id) &#123;
+            return i;
+        &#125;
+    &#125;
+    return -1; // 没找到
+&#125;
+
+// 添加学生
+void add_student() &#123;
+    student s;
+    cout &lt;&lt; &quot;请输入学生信息：&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;学生学号：&quot;;
+    cin &gt;&gt; s.id;
+    cout &lt;&lt; &quot;学生姓名：&quot;;
+    cin &gt;&gt; s.name;
+    cout &lt;&lt; &quot;高数成绩：&quot;;
+    cin &gt;&gt; s.math;
+    cout &lt;&lt; &quot;英语成绩：&quot;;
+    cin &gt;&gt; s.eng;
+    cout &lt;&lt; &quot;物理成绩：&quot;;
+    cin &gt;&gt; s.phy;
+    s.avg = (s.math + s.eng + s.phy) / 3;
+    students.push_back(s);
+&#125;
+
+// 删除学生
+void delete_student() &#123;
+    string id;
+    cout &lt;&lt; &quot;请输入要删除的学生的学号：&quot;;
+    cin &gt;&gt; id;
+    int idx = find_idx(id);
+    if (idx != -1) &#123;
+        students.erase(students.begin() + idx);
+        cout &lt;&lt; &quot;删除成功！&quot; &lt;&lt; endl;
+    &#125;
+    else &#123;
+        cout &lt;&lt; &quot;找不到该学生！&quot; &lt;&lt; endl;
+    &#125;
+&#125;
+
+// 修改学生成绩
+void modify_student() &#123;
+    string id;
+    cout &lt;&lt; &quot;请输入要修改的学生的学号：&quot;;
+    cin &gt;&gt; id;
+    int idx = find_idx(id);
+    if (idx != -1) &#123;
+        student&amp; s = students[idx];
+        cout &lt;&lt; &quot;请输入新的成绩：&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;高数成绩：&quot;;
+        cin &gt;&gt; s.math;
+        cout &lt;&lt; &quot;英语成绩：&quot;;
+        cin &gt;&gt; s.eng;
+        cout &lt;&lt; &quot;物理成绩：&quot;;
+        cin &gt;&gt; s.phy;
+        s.avg = (s.math + s.eng + s.phy) / 3;
+        cout &lt;&lt; &quot;修改成功！&quot; &lt;&lt; endl;
+    &#125;
+    else &#123;
+        cout &lt;&lt; &quot;找不到该学生！&quot; &lt;&lt; endl;
+    &#125;
+&#125;
+
+// 按任一单科成绩排序
+bool cmp_math(const student&amp; a, const student&amp; b) &#123;
+    return a.math &gt; b.math;
+&#125;
+bool cmp_eng(const student&amp; a, const student&amp; b) &#123;
+    return a.eng &gt; b.eng;
+&#125;
+bool cmp_phy(const student&amp; a, const student&amp; b) &#123;
+    return a.phy &gt; b.phy;
+&#125;
+void sort_by_score() &#123;
+    int choice;
+    cout &lt;&lt; &quot;请选择排序方式（1. 高数；2. 英语；3. 物理）：&quot;;
+    cin &gt;&gt; choice;
+    switch (choice) &#123;
+    case 1:
+        sort(students.begin(), students.end(), cmp_math);
+        cout &lt;&lt; &quot;按高数成绩排序后的成绩表：&quot; &lt;&lt; endl;
+        break;
+    case 2:
+        sort(students.begin(), students.end(), cmp_eng);
+        cout &lt;&lt; &quot;按英语成绩排序后的成绩表：&quot; &lt;&lt; endl;
+        break;
+    case 3:
+        sort(students.begin(), students.end(), cmp_phy);
+        cout &lt;&lt; &quot;按物理成绩排序后的成绩表：&quot; &lt;&lt; endl;
+        break;
+    default:
+        cout &lt;&lt; &quot;输入错误！&quot; &lt;&lt; endl;
+        return;
+    &#125;
+
+    for (int i = 0; i &lt; students.size(); i++) &#123;
+        cout &lt;&lt; students[i].id &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].math &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].eng &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].phy &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].avg &lt;&lt; endl;
+    &#125;
+&#125;
+
+// 统计某一科不及格人数并输出不及格学生名单
+void count_failures() &#123;
+    int choice;
+    int cnt = 0;
+    vector&lt;string&gt; failure_list; // 不及格学生名单
+    cout &lt;&lt; &quot;请选择科目（1. 高等数学；2. 英语；3. 物理）：&quot;;
+    cin &gt;&gt; choice;
+    switch (choice) &#123;
+    case 1:
+        for (int i = 0; i &lt; students.size(); i++) &#123;
+            if (students[i].math &lt; 60) &#123;//判断合格or不合格
+                cnt++;
+                failure_list.push_back(students[i].name);
+            &#125;
+        &#125;
+        cout &lt;&lt; &quot;高数不及格人数：&quot; &lt;&lt; cnt &lt;&lt; endl;
+        cout &lt;&lt; &quot;不及格学生名单：&quot; &lt;&lt; endl;
+        break;
+    case 2:
+        for (int i = 0; i &lt; students.size(); i++) &#123;
+            if (students[i].eng &lt; 60) &#123;
+                cnt++;
+                failure_list.push_back(students[i].name);
+            &#125;
+        &#125;
+        cout &lt;&lt; &quot;英语不及格人数：&quot; &lt;&lt; cnt &lt;&lt; endl;
+        cout &lt;&lt; &quot;不及格学生名单：&quot; &lt;&lt; endl;
+        break;
+    case 3:
+        for (int i = 0; i &lt; students.size(); i++) &#123;
+            if (students[i].phy &lt; 60) &#123;
+                cnt++;
+                failure_list.push_back(students[i].name);
+            &#125;
+        &#125;
+        cout &lt;&lt; &quot;物理不及格人数：&quot; &lt;&lt; cnt &lt;&lt; endl;
+        cout &lt;&lt; &quot;不及格学生名单：&quot; &lt;&lt; endl;
+        break;
+    default:
+        cout &lt;&lt; &quot;输入错误！&quot; &lt;&lt; endl;
+        return;
+    &#125;
+
+    for (int i = 0; i &lt; failure_list.size(); i++) &#123;
+        cout &lt;&lt; failure_list[i] &lt;&lt; endl;
+    &#125;
+&#125;
+
+// 按平均成绩排序并输出名次
+bool cmp_avg(const student&amp; a, const student&amp; b) &#123;
+    return a.avg &gt; b.avg;
+&#125;
+void sort_by_avg() &#123;
+    sort(students.begin(), students.end(), cmp_avg);
+    cout &lt;&lt; &quot;按平均成绩排序后的成绩表：&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;排名\t学号\t姓名\t高等数学\t英语\t物理\t平均成绩&quot; &lt;&lt; endl;
+    int rank = 1;
+    for (int i = 0; i &lt; students.size(); i++) &#123;
+        if (i &gt; 0 &amp;&amp; students[i].avg != students[i - 1].avg) &#123;
+            rank = i + 1;
+        &#125;
+        students[i].rank = rank;
+        cout &lt;&lt; students[i].rank &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].id &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].math &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].eng &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].phy &lt;&lt; &quot;\t&quot;;
+        cout &lt;&lt; students[i].avg &lt;&lt; endl;
+    &#125;
+&#125;
+
+// 从文件读取数据
+void read_data() &#123;
+    ifstream fin(&quot;scores.txt&quot;);
+    if (!fin) &#123;
+        cout &lt;&lt; &quot;无法打开文件！&quot; &lt;&lt; endl;
+        return;
+    &#125;
+    student s;
+    while (fin &gt;&gt; s.id &gt;&gt; s.name &gt;&gt; s.math &gt;&gt; s.eng &gt;&gt; s.phy) &#123;
+        s.avg = (s.math + s.eng + s.phy) / 3;
+        students.push_back(s);
+    &#125;
+    fin.close();
+    cout &lt;&lt; &quot;从文件读取数据成功！&quot; &lt;&lt; endl;
+&#125;
+
+// 将数据保存到文件
+void save_data() &#123;
+    ofstream fout(&quot;scores.txt&quot;);
+    if (!fout) &#123;
+        cout &lt;&lt; &quot;无法创建文件！&quot; &lt;&lt; endl;
+        return;
+    &#125;
+    for (int i = 0; i &lt; students.size(); i++) &#123;
+        fout &lt;&lt; students[i].id &lt;&lt; &quot; &quot;;
+        fout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;;
+        fout &lt;&lt; students[i].math &lt;&lt; &quot; &quot;;
+        fout &lt;&lt; students[i].eng &lt;&lt; &quot; &quot;;
+        fout &lt;&lt; students[i].phy &lt;&lt; endl;
+    &#125;
+    fout.close();
+    cout &lt;&lt; &quot;数据保存到文件成功！&quot; &lt;&lt; endl;
+&#125;
+
+int main() &#123;
+    int choice;
+    while (true) &#123;
+        cout &lt;&lt; endl;
+        cout &lt;&lt; &quot;成绩管理程序&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#1  添加学生&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#2  删除学生&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#3  修改学生成绩&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#4  按任一单科成绩排序&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#5  计算每名学生的平均成绩&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#6  统计任一单科成绩不及格的学生人数&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#7  根据平均成绩将成绩表按由高到低的次序排列，统计每名学生在考试中获得的名次&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#8  从文件读取数据&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#9  将数据保存到文件&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;#10 退出程序&quot; &lt;&lt; endl;
+        cout &lt;&lt; &quot;请选择序号操作：&quot;;
+        cin &gt;&gt; choice;
+        switch (choice) &#123;
+        case 1:
+            add_student();
+            break;
+        case 2:
+            delete_student();
+            break;
+        case 3:
+            modify_student();
+            break;
+        case 4:
+            sort_by_score();
+            break;
+        case 5:
+            for (int i = 0; i &lt; students.size(); i++) &#123;
+                students[i].avg = (students[i].math + students[i].eng + students[i].phy) / 3;
+                cout &lt;&lt; students[i].name &lt;&lt; &quot; 的平均成绩为：&quot; &lt;&lt; students[i].avg &lt;&lt; endl;
+            &#125;
+            break;
+        case 6:
+            count_failures();
+            break;
+        case 7:
+            sort_by_avg();
+            break;
+        case 8:
+            read_data();
+            break;
+        case 9:
+            save_data();
+            break;
+        case 10:
+            cout &lt;&lt; &quot;程序已退出。&quot; &lt;&lt; endl;
+            return 0;
+        default:
+            cout &lt;&lt; &quot;输入错误！&quot; &lt;&lt; endl;
+            break;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+
+      <div class="tags">
+          <a href="/tags/c/" rel="tag"><i class="ic i-tag"></i> c++</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-06-01 22:00:40" itemprop="dateModified" datetime="2023-06-01T22:00:40+08:00">2023-06-01</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="易山 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>易山 <i class="ic i-at"><em>@</em></i>千秋几世
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2023/06/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" title="实验周习题记录：成绩管理系统">http://example.com/2023/06/01/算法与数据结构设计：成绩管理系统/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/05/09/%E8%AE%A1%E8%AE%BE%E7%9C%81%E8%B5%9B%E8%90%BD%E6%B0%B4%E7%9A%84%E6%80%BB%E7%BB%93/" itemprop="url" rel="prev" data-background-image="&#x2F;assets&#x2F;s5.jpg" title="计设省赛落水的总结">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> 日常</span>
+  <h3>计设省赛落水的总结</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AE%B0%E5%BD%95%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text"> 实验周习题记录：成绩管理系统</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2023/06/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="实验周习题记录：成绩管理系统">实验周习题记录：成绩管理系统</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="易山"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">易山</p>
+  <div class="description" itemprop="description">TyBlog </div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">6</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">4</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3R5YWJhc2U=" title="https:&#x2F;&#x2F;github.com&#x2F;tyabase"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTM0MjAwMzQ3NA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;342003474"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnR5eWJhc2U5MTdAb3V0bG9vay5jb20=" title="mailto:tyybase917@outlook.com"><i class="ic i-envelope"></i></span>
+      <span class="exturl item facebook" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Byb2ZpbGUucGhwP2lkPTEwMDA5MDcxNDc2MTU0MSZtaWJleHRpZD1aYldLd0w=" title="https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100090714761541&amp;mibextid&#x3D;ZbWKwL"><i class="ic i-facebook"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>主页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
+</div>
+
+    <span><a href="/2023/02/15/%E8%AE%B0%E5%BD%95%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="记录：第一篇博客">记录：第一篇博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Go/" title="In Go">Go</a>
+</div>
+
+    <span><a href="/2023/04/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001%EF%BC%9AHelloWorld/" title="Go语言学习01-HelloWorld">Go语言学习01-HelloWorld</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
+</div>
+
+    <span><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" title="数据结构第一章：绪论">数据结构第一章：绪论</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
+</div>
+
+    <span><a href="/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/" title="时间复杂度递推法例题及求解">时间复杂度递推法例题及求解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/c/" title="In c++">c++</a>
+</div>
+
+    <span><a href="/2023/06/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" title="实验周习题记录：成绩管理系统">实验周习题记录：成绩管理系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
+</div>
+
+    <span><a href="/2023/05/09/%E8%AE%A1%E8%AE%BE%E7%9C%81%E8%B5%9B%E8%90%BD%E6%B0%B4%E7%9A%84%E6%80%BB%E7%BB%93/" title="计设省赛落水的总结">计设省赛落水的总结</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">易山 @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/06/01/算法与数据结构设计：成绩管理系统/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
