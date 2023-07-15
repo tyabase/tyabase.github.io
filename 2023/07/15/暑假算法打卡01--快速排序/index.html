@@ -24,15 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="算法" />
 
-<link rel="canonical" href="http://example.com/archives/2023/02/">
+
+<link rel="canonical" href="http://example.com/2023/07/15/%E6%9A%91%E5%81%87%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A101--%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
 
 
 
   <title>
-2023 Y / 02 M -
-
-Archive |
+暑假算法打卡01-快速排序 - 算法 |
 Yume Shoka = 千秋几世 = 浮生百日紀</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,9 +60,19 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">
-      Posted on "2023Y02M"
+  <h1 itemprop="name headline">暑假算法打卡01-快速排序
   </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-07-15 14:42:23">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-07-15T14:42:23+08:00">2023-07-15</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -91,14 +101,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
 
       </div>
       <div id="imgs" class="pjax">
-        <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
-        </ul>
+          <img src="/assets/s7.jpg">
       </div>
     </header>
     <div id="waves">
@@ -118,78 +121,174 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item header">
-          <a href="/archives">All</a> <small>/</small> <a href="/archives/2023">2023 Y</a> <small>/</small> 02 M<small>Archive</small>
-        
-    </h2>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="item" rel="index" title="In 算法"><span itemprop="name">算法</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
 
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2023-02-18T15:37:07+08:00"
-                  content="2023-02-18">
-              02-18
-            </time>
-                <span><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span>
-          </div>
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/15/%E6%9A%91%E5%81%87%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A101--%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
 
-          <div class="title">
-              <a href="/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/" itemprop="url">
-                <span itemprop="name">时间复杂度递推法例题及求解</span>
-              </a>
-          </div>
-        </article>
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="易山">
+    <meta itemprop="description" content="浮生百日紀, TyBlog ">
+  </span>
 
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2023-02-16T22:40:42+08:00"
-                  content="2023-02-16">
-              02-16
-            </time>
-                <span><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span>
-          </div>
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="千秋几世">
+  </span>
 
-          <div class="title">
-              <a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" itemprop="url">
-                <span itemprop="name">数据结构第一章：绪论</span>
-              </a>
-          </div>
-        </article>
+  <div class="body md" itemprop="articleBody">
+    
 
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2023-02-15T11:42:45+08:00"
-                  content="2023-02-15">
-              02-15
-            </time>
-                <span><a href="/categories/%E6%97%A5%E5%B8%B8/">日常</a></span>
-          </div>
+    <h1 id="排序算法学习之快速排序"><a class="anchor" href="#排序算法学习之快速排序">#</a> 排序算法学习之快速排序</h1>
+<p>快速排序的核心思想是：分治法</p>
+<p>通常求解快速排序问题大致分为以下三步：</p>
+<ol>
+<li>
+<p>确定分界点：</p>
+<ul>
+<li>取左边界:q [l]</li>
+<li>取中间值边界:q [(l+r)/2] 或者 q [l+r&gt;&gt;1]</li>
+<li>取右边界:q [r]</li>
+<li>或者随机</li>
+</ul>
+</li>
+<li>
+<p>根据分界点将整个数组分为两个部分，重新划分区间</p>
+</li>
+<li>
+<p>递归处理左右两个部分区间</p>
+<hr />
+<p>样题跳转： <em><a href="(https://www.acwing.com/problem/content/787/)">Acwing.785 快速排序</a></em></p>
+<hr />
+<p>我的想法：</p>
+<p>在 quick_sort 函数中，首先判断元素个数，若元素个数小于等于 1，则直接 return；定义左右边界 i,j，在 for 循环中，首先执行 i 往右移，j 往左移的步骤，判断 q [i]、q [j] 与分界点 x 的大小关系。如果遇见 i 与 j 无法相遇的问题，则交换 q [i],q [j]，最后左右两个区间排序。</p>
+</li>
+</ol>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+using namespace std;
+const int N = 100000;
 
-          <div class="title">
-              <a href="/2023/02/15/%E8%AE%B0%E5%BD%95%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" itemprop="url">
-                <span itemprop="name">记录：第一篇博客</span>
-              </a>
-          </div>
-        </article>
+int q[N];
+void quick_sort(int q[],int l,int r)
+&#123;
+    if(l &gt;= r)return;
+    int x = q[l+r&gt;&gt;1];
+    int i = l-1;
+    int j = r+1;
+    while(i &lt; j)
+    &#123;
+        do i++;while(q[i]&lt;x);
+        do j--;while(q[j]&gt;x);
+        if(i&lt;j)swap(q[i],q[j]);
+    &#125;
+    quick_sort(q,l,j);
+    quick_sort(q,j+1,r);
+&#125;
+int main()&#123;
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i = 0;i&lt;n;i++)scanf(&quot;%d&quot;,&amp;q[i]);
+    quick_sort(q,0,n-1);
+    for(int i = 0;i&lt;n;i++)printf(&quot;%d &quot;,q[i]);
+    return 0 ;
+&#125;
+</code></pre>
+
+      <div class="tags">
+          <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="ic i-tag"></i> 算法</a>
+      </div>
   </div>
 
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-07-15 15:15:57" itemprop="dateModified" datetime="2023-07-15T15:15:57+08:00">2023-07-15</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="易山 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>易山 <i class="ic i-at"><em>@</em></i>千秋几世
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2023/07/15/%E6%9A%91%E5%81%87%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A101--%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="暑假算法打卡01-快速排序">http://example.com/2023/07/15/暑假算法打卡01--快速排序/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
 
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/06/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="prev" data-background-image="&#x2F;assets&#x2F;s6.jpg" title="实验周习题记录：成绩管理系统">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> c++</span>
+  <h3>实验周习题记录：成绩管理系统</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
 
 
         </div>
         <div id="sidebar">
           
+
 <div class="inner">
 
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text"> 排序算法学习之快速排序</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2023/07/15/%E6%9A%91%E5%81%87%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A101--%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="bookmark" title="暑假算法打卡01-快速排序">暑假算法打卡01-快速排序</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -283,6 +382,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   </ul>
 </div>
 
+
         </div>
         <div class="dimmer"></div>
       </div>
@@ -298,20 +398,10 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
+<a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
 </div>
 
-    <span><a href="/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/" title="时间复杂度递推法例题及求解">时间复杂度递推法例题及求解</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
-</div>
-
-    <span><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" title="数据结构第一章：绪论">数据结构第一章：绪论</a></span>
+    <span><a href="/2023/05/09/%E8%AE%A1%E8%AE%BE%E7%9C%81%E8%B5%9B%E8%90%BD%E6%B0%B4%E7%9A%84%E6%80%BB%E7%BB%93/" title="计设省赛落水的总结">计设省赛落水的总结</a></span>
   </li>
 
       
@@ -328,6 +418,16 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
+</div>
+
+    <span><a href="/2023/02/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%BB%AA%E8%AE%BA/" title="数据结构第一章：绪论">数据结构第一章：绪论</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
 </div>
 
@@ -338,10 +438,10 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%97%A5%E5%B8%B8/" title="In 日常">日常</a>
+<a href="/categories/Go/" title="In Go">Go</a>
 </div>
 
-    <span><a href="/2023/05/09/%E8%AE%A1%E8%AE%BE%E7%9C%81%E8%B5%9B%E8%90%BD%E6%B0%B4%E7%9A%84%E6%80%BB%E7%BB%93/" title="计设省赛落水的总结">计设省赛落水的总结</a></span>
+    <span><a href="/2023/04/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001%EF%BC%9AHelloWorld/" title="Go语言学习01-HelloWorld">Go语言学习01-HelloWorld</a></span>
   </li>
 
       
@@ -358,10 +458,10 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Go/" title="In Go">Go</a>
+<a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="In 数据结构">数据结构</a>
 </div>
 
-    <span><a href="/2023/04/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001%EF%BC%9AHelloWorld/" title="Go语言学习01-HelloWorld">Go语言学习01-HelloWorld</a></span>
+    <span><a href="/2023/02/18/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%92%E6%8E%A8%E6%B3%95%E6%B1%82%E8%A7%A3/" title="时间复杂度递推法例题及求解">时间复杂度递推法例题及求解</a></span>
   </li>
 
   </ul>
@@ -392,7 +492,7 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'archives/2023/02/',
+    path: '2023/07/15/暑假算法打卡01--快速排序/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
@@ -403,7 +503,14 @@ Yume Shoka = 千秋几世 = 浮生百日紀</title>
       stats: "${hits} results found in ${time} ms"
     },
     valine: true,fancybox: true,
-    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',quiz: {
+      choice: "Multiple Choice",
+      multiple: "Multiple Answer",
+      true_false: "True/False",
+      essay: "Questions",
+      gap_fill: "Gap Filling",
+      mistake: "Wrong Answer"
+    },
     ignores : [
       function(uri) {
         return uri.includes('#');
